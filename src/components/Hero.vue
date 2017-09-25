@@ -7,14 +7,15 @@
 </template>
 
 <script>
-  import HeroDetails from './HeroDetails.vue'
+  import HEROES from '../assets/heroes'
+  import HeroDetails from './HeroDetails'
 
   export default {
     name: 'Hero',
     components: {
       HeroDetails,
     },
-    props: ["heroes", "updateHero"],
+    props: ["updateHero"],
     data() {
       return {
         input: ''
@@ -22,9 +23,9 @@
     },
     computed: {
       hero: function() {
-        for(const hero of this.heroes) {
+        for(const hero of HEROES) {
           if(hero.name === this.input) {
-            this.updateHero(hero)
+            this.updateHero(this.makeHero(hero))
             return hero
           }
         }
@@ -36,9 +37,17 @@
     methods: {
       handleChange(event) {
         this.input = event.target.value
-      }
+      },
+      makeHero(hero) {
+        hero.hp = hero.str * 20 + 200
+        hero.batTick = hero.bat * 30
+        hero.atkTimer = 0.00
+        hero.armorValueMultiplier = 1 - 0.06 * hero.armor / (1 + 0.06 * Math.abs(hero.armor))
+        return hero
+      },
     }
   }
+  
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->

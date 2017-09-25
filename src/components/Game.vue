@@ -1,7 +1,7 @@
 <template>
   <div>
-    <Hero id="heroLeft" :heroes="sampleHeroes" :updateHero="updateHeroLeft" />
-    <Hero id="heroRight" :heroes="sampleHeroes" :updateHero="updateHeroRight" />
+    <Hero id="heroLeft" class="hero" :updateHero="updateHeroLeft" />
+    <Hero id="heroRight" class="hero" :updateHero="updateHeroRight" />
     <FightResults :heroesRef="[heroLeft, heroRight]" />
   </div>
 </template>
@@ -20,32 +20,6 @@ import FightResults from './FightResults'
       return {
         heroLeft: null,
         heroRight: null,
-        sampleHeroes: [
-          { name: 'Abbadon',
-            str: 23,
-            min: 55,
-            max: 65,
-            bat: 1.7,
-            armor: 1.43, },
-          { name: 'Ancient Apparition',
-            str: 18,
-            min: 44,
-            max: 54,
-            bat: 1.7,
-            armor: 1.86, },
-          { name: 'Oracle',
-            str: 18,
-            min: 39,
-            max: 45,
-            bat: 1.4,
-            armor: 2.14, },
-          { name: 'Ogre Magi',
-            str: 23,
-            min: 58,
-            max: 64,
-            bat: 1.7,
-            armor: 8, }
-        ]
       }
     },
     computed: {},
@@ -66,5 +40,8 @@ import FightResults from './FightResults'
 <style scoped>
   div {
     display: flex;
+  }
+  .hero {
+    width: 200px;
   }
 </style>
