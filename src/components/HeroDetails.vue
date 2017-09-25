@@ -1,6 +1,6 @@
 <template>
-  <ul>
-    <li v-if="hero" v-for="(attr, index) in hero">{{index + ": " + attr}}</li>
+  <ul v-if="hero">
+    <li v-for="(attr, index) in hero" :key="index">{{index + ": " + attr}}</li>
   </ul>
 </template>
 
