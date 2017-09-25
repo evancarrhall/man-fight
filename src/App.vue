@@ -21,7 +21,13 @@ export default {
   padding: 0;
 }
 
-#app {
+html, body {
+  width: 100%;
+  height: 100%;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
 
+#app {
+  height: 100%;
 }
 </style>

@@ -1,7 +1,7 @@
 <template>
-  <div>
-    <input @input="handleChange" />
-    <HeroDetails :hero="hero" />
+  <div class="hero">
+    <input @input="handleChange" spellcheck="false"/>
+    <HeroDetails class="heroDetails" :hero="hero" />
   </div>
   
 </template>
@@ -56,9 +56,26 @@
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-  div {
+  .hero {
+    width: 50%;
     display: flex;
     flex-flow: column;
     align-items: flex-start;
+  }
+  input {
+    position: absolute;
+    height: 100%;
+    width: 50%;
+    text-align: center;
+    font-size: 50px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-decoration: none;
+    border: none;
+  }
+  input:focus {
+    outline-width: none;
+  }
+  .heroDetails {
+    z-index: 2;
   }
 </style>

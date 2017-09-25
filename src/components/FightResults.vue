@@ -1,11 +1,7 @@
 <template>
-  <div>
+  <div class="FightResults">
     <button @click="calculateFight">Fight!</button>
-    <ul>
-      <li v-for="result in results">
-        <p>{{Math.round(result.l.hp)}}</p><p>{{Math.round(result.r.hp)}}</p><p>{{result.tick}}</p>
-      </li>
-    </ul>
+    <div :class="winnerClass">WINNER</div>
   </div>
 </template>
 
@@ -26,7 +22,17 @@
         results: []
       }
     },
-    computed: {},
+    computed: {
+      winnerClass() {
+        if(this.heroLeft.hp <= 0 && this.heroRight.hp > 0) {
+          return ["winnerRight"]
+        } else if (this.heroLeft.hp > 0 && this.heroRight.hp <= 0) {
+          return ["winnerLeft"] 
+        } else {
+          return null
+        }
+      },
+    },
     mounted() {},
     methods: {
       calculateFight() {
@@ -42,6 +48,7 @@
           this.results = [{l: this.heroLeft, r: this.heroRight, tick: this.tick}]
 
           this.simulateTicks()
+          this.results.push({l: this.heroLeft, r: this.heroRight, tick: this.tick})
         }
       },
       simulateTicks() {
@@ -68,9 +75,7 @@
             hr.atkTimer = -1
           }
           hr.atkTimer = hr.atkTimer + 1
-
-          if(this.heroLeft.hp !== hl.hp || this.heroRight.hp !== hr.hp)
-            this.results.push({l: hl, r: hr, tick: this.tick})
+           
           this.heroLeft = hl
           this.heroRight = hr
 
@@ -87,26 +92,31 @@
         min = Math.ceil(min);
         max = Math.floor(max);
         return Math.floor(Math.random() * (max - min + 1)) + min;
-      } 
+      },
     }
   }
 </script>
 
 <style scoped>
-  div {
+  .FightResults {
     display: flex;
-    align-items: flex-start;
+    flex-flow: column;
+    align-items: center;
+    width: 150px;
+    padding: 10px 20px;
+  }
+  button {
+    margin: 10px 0 10px 0;
+  }
+  .winnerLeft {
+    display:flex;
+    justify-content: flex-start;
+    width: 100%;
+  }
+  .winnerRight {
+    display:flex;
+    justify-content: flex-end;
+    width: 100%;
   }
 
-  h2 {
-    padding: 30px;
-  }
-
-  li {
-    display: flex;
-  }
-
-  p {
-    padding: 0 2px;
-  }
 </style>

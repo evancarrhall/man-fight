@@ -19,9 +19,14 @@
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style>
+<style scoped>
   ul {
     list-style: none;
     margin: 10px;
+  }
+  li {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 10px;
+    opacity: 0.2;
   }
 </style>

@@ -1,8 +1,10 @@
 <template>
-  <div>
-    <Hero id="heroLeft" class="hero" :updateHero="updateHeroLeft" />
-    <Hero id="heroRight" class="hero" :updateHero="updateHeroRight" />
-    <FightResults :heroesRef="[heroLeft, heroRight]" />
+  <div id="Game">
+    <div id="heroAreas">
+      <Hero id="heroLeft" class="Hero" :updateHero="updateHeroLeft" />
+      <Hero id="heroRight" class="Hero" :updateHero="updateHeroRight" />
+    </div>
+    <FightResults id="FightResults" :heroesRef="[heroLeft, heroRight]" />
   </div>
 </template>
 
@@ -38,10 +40,19 @@ import FightResults from './FightResults'
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-  div {
+  #Game {
+    height: 100%;
+  }
+  #heroAreas {
+    height: 100%;
     display: flex;
   }
-  .hero {
-    width: 200px;
+  #FightResults {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #f4f4f4
   }
+
 </style>
