@@ -24,7 +24,7 @@
     computed: {
       hero: function() {
         for(const hero of HEROES) {
-          if(hero.name === this.input) {
+          if(hero.name.toUpperCase() === this.input.toUpperCase()) {
             const h = this.makeHero(hero)
             this.updateHero(h)
             return h
@@ -54,7 +54,6 @@
   
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
   .hero {
     width: 50%;
@@ -71,6 +70,7 @@
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     text-decoration: none;
     border: none;
+    text-transform: uppercase;
   }
   input:focus {
     outline-width: none;
