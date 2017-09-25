@@ -50,6 +50,11 @@
           let hl = Object.assign({}, this.heroLeft)
           let hr = Object.assign({}, this.heroRight)
 
+          // hps
+          hl.hp += hl.heal_per_tick
+          hr.hp += hr.heal_per_tick
+
+
           // heroLeft attack
           if(hl.atkTimer >= hl.batTick) {
             hr.hp -= this.calcDamage(hl, hr)

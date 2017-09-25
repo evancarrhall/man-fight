@@ -25,8 +25,9 @@
       hero: function() {
         for(const hero of HEROES) {
           if(hero.name === this.input) {
-            this.updateHero(this.makeHero(hero))
-            return hero
+            const h = this.makeHero(hero)
+            this.updateHero(h)
+            return h
           }
         }
         this.updateHero(null)
@@ -38,11 +39,14 @@
       handleChange(event) {
         this.input = event.target.value
       },
-      makeHero(hero) {
+      makeHero(h) {
+        let hero = Object.assign({}, h)
         hero.hp = hero.str * 20 + 200
         hero.batTick = hero.bat * 30
         hero.atkTimer = 0.00
         hero.armorValueMultiplier = 1 - 0.06 * hero.armor / (1 + 0.06 * Math.abs(hero.armor))
+        hero.hps = hero.base_hps + hero.str * 0.06
+        hero.heal_per_tick = hero.hps / 30
         return hero
       },
     }

@@ -7,7 +7,8 @@ const HEROES = [
     min: 55,
     max: 65,
     bat: 1.7,
-    armor: 1.43, },
+    armor: 1.43,
+    base_hps: 0, },
   { name: 'Ancient Apparition',
     str: 18,
     agi: 20,
@@ -16,7 +17,8 @@ const HEROES = [
     min: 44,
     max: 54,
     bat: 1.7,
-    armor: 1.86,},
+    armor: 1.86,
+    base_hps: 0,},
   { name: 'Oracle',
     str: 18,
     agi: 15,
@@ -25,7 +27,8 @@ const HEROES = [
     min: 39,
     max: 45,
     bat: 1.4,
-    armor: 2.14,},
+    armor: 2.14,
+    base_hps: 0,},
   { name: 'Ogre Magi',
     str: 23,
     agi: 14,
@@ -34,7 +37,8 @@ const HEROES = [
     min: 58,
     max: 64,
     bat: 1.7,
-    armor: 8, },
+    armor: 8,
+    base_hps: 3.25, },
     { name: 'Earth Spirit',
     str: 21,
     agi: 23,
@@ -43,7 +47,8 @@ const HEROES = [
     min: 46,
     max: 56,
     bat: 1.7,
-    armor: 3.43, }
+    armor: 3.43,
+    base_hps: 0, }
 ]
 
 export default HEROES
