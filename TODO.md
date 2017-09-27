@@ -1,4 +1,3 @@
-### refactor into nicer components
-
-### sim logic
- - ?
+- refactor into nicer components
+- refactor FightResults.vue fight logic for clarity
+- multiple simulations
