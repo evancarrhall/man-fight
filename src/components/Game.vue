@@ -1,6 +1,10 @@
 <template>
   <div id="Game">
-    <div id="heroAreas">
+    <div>
+      <div v-for="hero of heroes" :key="hero"></div>
+    </div>
+
+    <div v-if="false" id="heroAreas">
       <Hero id="heroLeft" class="Hero" :updateHero="updateHeroLeft" />
       <Hero id="heroRight" class="Hero" :updateHero="updateHeroRight" />
     </div>
@@ -24,7 +28,11 @@ import FightResults from './FightResults'
         heroRight: null,
       }
     },
-    computed: {},
+    computed: {
+      heros() {
+        return new Array(105)
+      }
+    },
     mounted() {},
     methods: {
       updateHeroLeft(hero) {
@@ -41,7 +49,9 @@ import FightResults from './FightResults'
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
   #Game {
+    position: absolute;
     height: 100%;
+    width: 100%;
   }
   #heroAreas {
     height: 100%;
