@@ -6,6 +6,7 @@
       @mouseout="isHover = false"
     >
     </div>
+    <div class="newHeroLabel" v-if="hero.isNew">NEW</div>
     <div class="imgContainer">
       <img :src="'/static/portraits/' + hero.img">
       <div class="hoverLabel" v-if="isHover">{{hero.name}}</div>
@@ -32,6 +33,7 @@
 .Hero {
   position: relative;
   margin: 5px;
+  user-select: none;
 }
 .Hero .hoverContainer {
   height: 94px;
@@ -50,6 +52,25 @@
   background-color: rgba(0,0,0,0.2);
   transition: all 120ms ease;
 }
+.Hero .newHeroLabel {
+  position: absolute;
+  font-size: 14px;
+  letter-spacing: 0.5px;
+  font-family: 'Open Sans';
+  color: rgba(241, 188, 220, 1);
+  text-shadow: 2px 2px 15px #a84c7d, -2px -2px 15px #a84c7d, 2px 2px 5px #000, -2px -2px 5px #000, 2px 2px 15px #a84c7d, -2px -2px 15px #a84c7d;
+  top: -10px;
+  left: 0;
+  right: 0;
+  text-align: center;
+  z-index: 1;
+  transition: all 120ms ease;
+}
+.Hero.hover .newHeroLabel {
+  top: -70px;
+  font-size: 20px;
+  letter-spacing: 1.8px;
+}
 .Hero .imgContainer img {
   margin-left: 50%;
   transform: translateX(-50%);
@@ -60,7 +81,7 @@
   width: 140px;
   top: -46px;
   left: -48px;
-  z-index: 1;
+  z-index: 2;
   border: 3px solid rgba(0,0,0,1);
   background-color: rgba(0,0,0,1);
   filter: brightness(140%);
@@ -72,7 +93,6 @@
   background-color: rgba(20,20,20,0.45);
   color: rgba(255,255,255,0.95);
   text-transform: uppercase;
-  font-weight: 800;
   letter-spacing: 1.8px;
   font-family: 'Open Sans';
   text-align: center;

@@ -124,8 +124,7 @@ import FightResults from './FightResults'
 }
 .Game .attributeLabel {
   font-family: 'Open Sans';
-  font-weight: 500;
-  font-size: 13px;
+  font-size: 12px;
   letter-spacing: 2px;
   color: rgba(255,255,255,0.5);
   position: absolute;
