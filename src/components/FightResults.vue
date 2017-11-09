@@ -86,6 +86,7 @@
         const base_attack_damage = this.getRandomInt(source.min, source.max)
         const main_damage = base_attack_damage + source[source.main_attr]
         const final_damage = main_damage * target.armorValueMultiplier
+        console.log(final_damage)
         return final_damage
       },
       getRandomInt(min, max) {
@@ -97,7 +98,7 @@
   }
 </script>
 
-<style scoped>
+<style>
   .FightResults {
     display: flex;
     flex-flow: column;

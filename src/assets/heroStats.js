@@ -1,4 +1,4 @@
-const stats = `Abaddon minimap icon.png Abaddon,Strength attribute symbol.png,23,2.6,85.4,17,1.5,53,21,2,69,61,6.1,207.4,310,1.43,55,65,150,1.7,0.56,0.41,1800,800,0.6,24,1.5,2
+var stats = `Abaddon minimap icon.png Abaddon,Strength attribute symbol.png,23,2.6,85.4,17,1.5,53,21,2,69,61,6.1,207.4,310,1.43,55,65,150,1.7,0.56,0.41,1800,800,0.6,24,1.5,2
 Alchemist minimap icon.png Alchemist,Strength attribute symbol.png,25,2.1,75.4,16,1.2,44.8,25,1.8,68.2,66,5.1,188.4,295,2.29,49,58,150,1.7,0.35,0.65,1800,800,0.6,24,1.5,2
 Ancient Apparition minimap icon.png Ancient Apparition,Intelligence attribute symbol.png,18,1.7,58.8,20,2.2,72.8,25,2.6,87.4,63,6.5,219,295,1.86,44,54,675,1.7,0.45,0.3,1800,800,0.6,24,1.5,2
 Anti-Mage minimap icon.png Anti-Mage,Agility attribute symbol.png,22,1.5,58,22,2.8,89.2,15,1.8,58.2,59,6.1,205.4,310,2.14,49,53,150,1.45,0.3,0.6,1800,800,0.5,24,1.5,2
@@ -114,4 +114,4 @@ Witch Doctor minimap icon.png Witch Doctor,Intelligence attribute symbol.png,16,
 Wraith King minimap icon.png Wraith King,Strength attribute symbol.png,22,2.8,89.2,18,1.7,58.8,18,1.6,56.4,58,6.1,204.4,300,2.57,61,63,150,1.7,0.56,0.44,1800,800,0.5,24,1.5,2
 Zeus minimap icon.png Zeus,Intelligence attribute symbol.png,19,2.6,81.4,11,1.2,39.8,22,2.7,86.8,52,6.5,208,300,1.57,43,51,350,1.7,0.633,0.366,1800,800,0.6,24,1.5,2`
 
-export default stats
+module.exports.stats = stats
