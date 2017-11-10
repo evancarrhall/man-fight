@@ -58,7 +58,13 @@
   letter-spacing: 0.5px;
   font-family: 'Open Sans';
   color: rgba(241, 188, 220, 1);
-  text-shadow: 2px 2px 15px #a84c7d, -2px -2px 15px #a84c7d, 2px 2px 5px #000, -2px -2px 5px #000, 2px 2px 15px #a84c7d, -2px -2px 15px #a84c7d;
+  text-shadow: 
+    2px 2px 15px #a84c7d, 
+    -2px -2px 15px #a84c7d, 
+    2px -2px 15px #a84c7d, 
+    -2px 2px 15px #a84c7d,
+    0 0 7px #000, 
+    0 0 7px #000;
   top: -10px;
   left: 0;
   right: 0;
