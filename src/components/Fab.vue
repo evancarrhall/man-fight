@@ -26,7 +26,7 @@
 .Fab {
   position: relative;
   height: 49px;
-  box-shadow: 0px 0px 4px 1px rgba(0,34,255,0.55);
+  box-shadow: 0px 0px 10px 0px rgba(0,34,255,0.55);
   user-select: none;
 }
 .Fab:hover {
