@@ -5,7 +5,7 @@
         <div class="attributeLabelContainer">
           <div class="attributeLabel">STRENGTH</div>
         </div>
-        <div class="heroFlex">
+        <div class="heroes" ref="heroes" :style="{width: numberOfColumns * 54 + 'px'}">
           <Hero 
             v-for="hero of heroesByAttr.str" 
             :key="hero.name"
@@ -17,7 +17,7 @@
         <div class="attributeLabelContainer">
           <div class="attributeLabel">AGILITY</div>
         </div>
-        <div class="heroFlex">
+        <div class="heroes" :style="{width: numberOfColumns * 54 + 'px'}">
           <Hero 
             v-for="hero of heroesByAttr.agi" 
             :key="hero.name"
@@ -25,11 +25,11 @@
           />
         </div>
       </div>
-      <div class="heroesByAttribute">
+      <div class="heroesByAttribute last">
         <div class="attributeLabelContainer">
           <div class="attributeLabel">INTELLIGENCE</div>
         </div>
-        <div class="heroFlex">
+        <div class="heroes" :style="{width: numberOfColumns * 54 + 'px'}">
           <Hero 
             v-for="hero of heroesByAttr.int" 
             :key="hero.name"
@@ -65,6 +65,8 @@ import FightResults from './FightResults'
         heroRight: null,
         portraits: null,
         heroData: heroData,
+        numberOfColumns: null,
+        isCollapsed: null,
       }
     },
     computed: {
@@ -77,7 +79,13 @@ import FightResults from './FightResults'
       }
     },
     mounted() {
-
+      this.isCollapsed = this.getIsCollapsed()
+      this.numberOfColumns = this.getNumOfColumns()
+      window.addEventListener('resize', (e) => {
+        this.isCollapsed = this.getIsCollapsed()
+        this.numberOfColumns = this.getNumOfColumns()
+      })
+      window.addEventListener('keypress', (e) => console.log(e))
     },
     methods: {
       updateHeroLeft(hero) {
@@ -86,6 +94,13 @@ import FightResults from './FightResults'
       updateHeroRight(hero) {
         this.heroRight = hero
       },
+      getIsCollapsed() {
+        return window.innerWidth <= 600
+      },
+      getNumOfColumns() {
+        const width = this.isCollapsed ? window.innerWidth - 20 : window.innerWidth - 25 - 2 - 15 - 60
+        return Math.min( Math.floor( width / 54 ) , 22)
+      }
     }
   }
 
@@ -102,21 +117,24 @@ import FightResults from './FightResults'
   min-height: 100vh;
   background-color: #526c7f;
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
 }
 .Game .heroesContainer {
-  width: 1230px;
+  margin: 45px 30px;
 }
 .Game .heroesByAttribute {
   display: flex;
   margin-bottom: 20px;
 }
+.Game .heroesByAttribute.last {
+  margin-bottom: 0;
+}
 .Game .attributeLabelContainer {
   position: relative;
-  width: 30px;
-  min-height: 200px;
-  margin: 5px 15px 5px 0;
+  flex: none;
+  width: 0px;
+  margin: 5px 15px 5px 25px;
   border-right: 2px solid rgba(255,255,255,0.5);
   display: flex;
   align-items: center;
@@ -131,13 +149,32 @@ import FightResults from './FightResults'
   user-select: none;
   cursor: default;
   transform: rotate(-90deg);
-  padding-bottom: 10px;
+  padding-bottom: 20px;
+}
 
+.Game .Hero {
+  display: inline-block;
 }
-.Game .heroFlex {
-  display: flex;
-  flex-flow: wrap;
+@media (max-width: 600px) {
+  .Game .heroesContainer {
+    margin: 25px 0;
+  }
+  .Game .heroesByAttribute {
+    flex-flow: column;
+  }
+  .Game .attributeLabelContainer {
+    width: calc(100% - 10px);
+    border-right: unset;
+    border-bottom: 2px solid rgba(255,255,255,0.5);
+    margin: 10px 0 5px 5px;
+    justify-content: flex-start;
+  }
+  .Game .attributeLabel {
+    transform: unset;
 }
+}
+
+
 /* #heroAreas {
   height: 100%;
   display: flex;
