@@ -1,5 +1,6 @@
 <template>
   <div class="Game">
+    
     <div class="heroesContainer">
       <div class="heroesByAttribute">
         <div class="attributeLabelContainer">
@@ -38,6 +39,8 @@
         </div>
       </div>
     </div>
+    <div class="filterOverlay" v-show="overlayText !== ''">{{overlayText}}</div>
+    <Fab class="fab" />
     <!-- <div v-if="false">
       <div id="heroAreas">
         <Hero id="heroLeft" class="Hero" :updateHero="updateHeroLeft" :heroStatsObj="heroStatsObj" />
@@ -52,12 +55,14 @@
 import heroData from '../assets/heroData.json'
 import Hero from './Hero'
 import FightResults from './FightResults'
+import Fab from './Fab'
 
   export default {
     name: 'Game',
     components: {
       Hero,
       FightResults,
+      Fab,
     },
     data() {
       return {
@@ -67,6 +72,8 @@ import FightResults from './FightResults'
         heroData: heroData,
         numberOfColumns: null,
         isCollapsed: null,
+        overlayText: '',
+        overlayCounter: null
       }
     },
     computed: {
@@ -85,7 +92,7 @@ import FightResults from './FightResults'
         this.isCollapsed = this.getIsCollapsed()
         this.numberOfColumns = this.getNumOfColumns()
       })
-      window.addEventListener('keypress', (e) => console.log(e))
+      window.addEventListener('keydown', this.handleKeypress)
     },
     methods: {
       updateHeroLeft(hero) {
@@ -95,11 +102,16 @@ import FightResults from './FightResults'
         this.heroRight = hero
       },
       getIsCollapsed() {
-        return window.innerWidth <= 600
+        return window.innerWidth <= 650
       },
       getNumOfColumns() {
         const width = this.isCollapsed ? window.innerWidth - 20 : window.innerWidth - 25 - 2 - 15 - 60
         return Math.min( Math.floor( width / 54 ) , 22)
+      },
+      handleKeypress(e) {
+        if(e.key === 'Escape')  this.overlayText = ''
+        else if(e.key === 'Backspace') this.overlayText = this.overlayText.slice(0, this.overlayText.length - 1)
+        else if(e.key.match(`^[A-Za-z]$`)) this.overlayText += e.key
       }
     }
   }
@@ -119,6 +131,7 @@ import FightResults from './FightResults'
   display: flex;
   align-items: center;
   justify-content: center;
+  overflow: hidden;
 }
 .Game .heroesContainer {
   margin: 45px 30px;
@@ -151,11 +164,35 @@ import FightResults from './FightResults'
   transform: rotate(-90deg);
   padding-bottom: 20px;
 }
-
 .Game .Hero {
   display: inline-block;
 }
-@media (max-width: 600px) {
+.Game .filterOverlay {
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0,0,0,0.5);
+  color: rgba(255,255,255,0.95);
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  font-family: 'Open Sans';
+  text-align: center;
+  font-size: 72px;
+  z-index: 5;
+  user-select: none;
+}
+.Game .Fab {
+  position: fixed;
+  right: 50px;
+  bottom: 15px;
+  z-index: 9;
+}
+@media (max-width: 650px) {
   .Game .heroesContainer {
     margin: 25px 0;
   }
@@ -173,7 +210,7 @@ import FightResults from './FightResults'
     transform: unset;
     padding-bottom: 3px;
     position: unset;
-}
+  }
 }
 
 

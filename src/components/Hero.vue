@@ -4,6 +4,7 @@
       class="hoverContainer"
       @mouseover="isHover = true"
       @mouseout="isHover = false"
+      @mousedown="isHover = false"
     >
     </div>
     <div class="newHeroLabel" v-if="hero.isNew">NEW</div>
