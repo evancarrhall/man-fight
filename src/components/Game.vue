@@ -166,11 +166,13 @@ import FightResults from './FightResults'
     width: calc(100% - 10px);
     border-right: unset;
     border-bottom: 2px solid rgba(255,255,255,0.5);
-    margin: 10px 0 5px 5px;
+    margin: 0 0 5px 5px;
     justify-content: flex-start;
   }
   .Game .attributeLabel {
     transform: unset;
+    padding-bottom: 3px;
+    position: unset;
 }
 }
 
