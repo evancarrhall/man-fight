@@ -211,6 +211,14 @@ import Fab from './Fab'
     padding-bottom: 3px;
     position: unset;
   }
+  .Game .Fab {
+    right: 5%;
+  }
+}
+@media (max-width: 385px) {
+  .Game .Fab {
+    left: 5%;
+  }
 }
 
 

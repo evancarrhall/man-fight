@@ -4,7 +4,7 @@
     @mouseout="()=>{}"
     @mousedown="()=>{}"
   >
-    <img src="../assets/fab.png" >
+    <div class="imgContainer"><img src="../assets/fab.png" ></div>
     <div class="text">MAN FIGHT</div>
   </div>
 </template>
@@ -21,12 +21,14 @@
   }
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style>
 .Fab {
   position: relative;
   height: 49px;
-  box-shadow: 0px 0px 10px 0px rgba(0,34,255,0.55);
+  box-shadow: 
+    0px 5px 6px -3px rgba(0, 0, 0, 0.2),
+    0px 9px 12px 1px rgba(0, 0, 0, 0.14),
+    0px 3px 16px 2px rgba(0, 0, 0, 0.12);
   user-select: none;
 }
 .Fab:hover {
@@ -39,7 +41,7 @@
   height: 100%;
   width: 100%;
   opacity: 0;
-  transition: opacity 100ms linear;
+  transition: opacity 100ms linear; 
   box-shadow: 0px 0px 35px 2px rgba(255,255,255, 0.5);
 }
 .Fab:hover::before {
@@ -61,6 +63,9 @@
 }
 .Fab:active::after {
   opacity: 0.15;
+}
+.Fab .imgContainer {
+  overflow: hidden;
 }
 .Fab img {
   height: 100%;
