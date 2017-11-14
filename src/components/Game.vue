@@ -190,7 +190,6 @@ import Fab from './Fab'
   position: fixed;
   right: 50px;
   bottom: 15px;
-  z-index: 9;
 }
 @media (max-width: 650px) {
   .Game .heroesContainer {

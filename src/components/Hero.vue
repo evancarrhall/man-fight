@@ -1,10 +1,10 @@
 <template>
-  <div class="Hero" :class="{hover: isHover}">
+  <div class="Hero" :class="{hover: isHover, activated: isActivated}">
     <div 
       class="hoverContainer"
-      @mouseover="isHover = true"
-      @mouseout="isHover = false"
-      @mousedown="isHover = false"
+      @mouseover="handleMouseover"
+      @mouseout="handleMouseout"
+      @mousedown="handleMousedown"
     >
     </div>
     <div class="newHeroLabel" v-if="hero.isNew">NEW</div>
@@ -18,15 +18,29 @@
 <script>
   export default {
     name: 'Hero',
-    props: ['hero'],
+    props: ['hero', 'handlemouseOver', 'handleMouseout'],
     data() {
       return {
         isHover: false,
+        isActivated: false,
       }
     },
     computed: {},
     mounted() {},
-    methods: {}
+    methods: {
+      handleMouseover() {
+        this.isHover = true
+        if(this.handlemouseOver) this.handlemouseOver()
+      },
+      handleMousedown() {
+        this.isHover = false
+        this.isActivated = !this.isActivated
+      },
+      handleMouseout() {
+        this.isHover = false
+        if(this.handleMouseout) this.handleMouseout()
+      },
+    }
   }
 </script>
 
@@ -52,6 +66,11 @@
   box-sizing: border-box;
   background-color: rgba(0,0,0,0.2);
   transition: all 120ms ease;
+}
+.Hero.activated .imgContainer {
+   box-shadow: 0px 0px 4px 3px rgba(255,255,255,1),
+    0px 0px 10px 4px rgba(255,255,255,1),
+    0px 0px 20px 6px rgba(255,255,255,1);
 }
 .Hero .newHeroLabel {
   position: absolute;
