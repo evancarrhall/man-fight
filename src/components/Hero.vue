@@ -1,5 +1,5 @@
 <template>
-  <div class="Hero" :class="{hover: isHover, activated: isActivated}">
+  <div class="Hero" :class="{hover: isHover}">
     <div 
       class="hoverContainer"
       @mouseover="handleMouseover"
@@ -18,11 +18,10 @@
 <script>
   export default {
     name: 'Hero',
-    props: ['hero', 'handlemouseOver', 'handleMouseout'],
+    props: ['hero', 'onMouseover', 'onMouseout', 'onMousedown'],
     data() {
       return {
         isHover: false,
-        isActivated: false,
       }
     },
     computed: {},
@@ -30,15 +29,17 @@
     methods: {
       handleMouseover() {
         this.isHover = true
-        if(this.handlemouseOver) this.handlemouseOver()
+        if(this.onMouseover) this.onMouseover(this.hero)
       },
-      handleMousedown() {
-        this.isHover = false
-        this.isActivated = !this.isActivated
+      handleMousedown() { 
+        if(this.onMousedown) this.onMousedown(this.hero)
+        else {
+
+        }
       },
       handleMouseout() {
         this.isHover = false
-        if(this.handleMouseout) this.handleMouseout()
+        if(this.onMouseout) this.onMouseout(this.hero)
       },
     }
   }
@@ -66,11 +67,6 @@
   box-sizing: border-box;
   background-color: rgba(0,0,0,0.2);
   transition: all 120ms ease;
-}
-.Hero.activated .imgContainer {
-   box-shadow: 0px 0px 4px 3px rgba(255,255,255,1),
-    0px 0px 10px 4px rgba(255,255,255,1),
-    0px 0px 20px 6px rgba(255,255,255,1);
 }
 .Hero .newHeroLabel {
   position: absolute;
@@ -107,7 +103,7 @@
   width: 140px;
   top: -46px;
   left: -48px;
-  z-index: 2;
+  z-index: 3;
   border: 3px solid rgba(0,0,0,1);
   background-color: rgba(0,0,0,1);
   filter: brightness(140%);

@@ -1,5 +1,5 @@
 <template>
-  <div class="Game">
+  <div class="Game" :class="{ready: activatedHeroes.length === 2}">
     
     <div class="heroesContainer">
       <div class="heroesByAttribute">
@@ -11,6 +11,8 @@
             v-for="hero of heroesByAttr.str" 
             :key="hero.name"
             :hero="hero"
+            :class="getHeroClass(hero)"
+            :onMousedown = "onMousedown"
           />
         </div>
       </div>
@@ -23,6 +25,8 @@
             v-for="hero of heroesByAttr.agi" 
             :key="hero.name"
             :hero="hero"
+            :class="getHeroClass(hero)"
+            :onMousedown = "onMousedown"
           />
         </div>
       </div>
@@ -35,11 +39,14 @@
             v-for="hero of heroesByAttr.int" 
             :key="hero.name"
             :hero="hero"
+            :class="getHeroClass(hero)"
+            :onMousedown = "onMousedown"
           />
         </div>
       </div>
     </div>
-    <div class="filterOverlay" v-show="overlayText !== ''">{{overlayText}}</div>
+    <div class="overlay"></div>
+    <div class="filterText">{{overlayText}}</div>
     <Fab class="fab" />
     <!-- <div v-if="false">
       <div id="heroAreas">
@@ -66,14 +73,12 @@ import Fab from './Fab'
     },
     data() {
       return {
-        heroLeft: null,
-        heroRight: null,
-        portraits: null,
         heroData: heroData,
         numberOfColumns: null,
         isCollapsed: null,
         overlayText: '',
-        overlayCounter: null
+        overlayCounter: null,
+        activatedHeroes: [],
       }
     },
     computed: {
@@ -83,7 +88,7 @@ import Fab from './Fab'
           heroesByAttr[hero.main_attr][hero.name] = hero
           return heroesByAttr
         } , {})
-      }
+      },
     },
     mounted() {
       this.isCollapsed = this.getIsCollapsed()
@@ -109,9 +114,22 @@ import Fab from './Fab'
         return Math.min( Math.floor( width / 54 ) , 22)
       },
       handleKeypress(e) {
+        e.preventDefault()
         if(e.key === 'Escape')  this.overlayText = ''
         else if(e.key === 'Backspace') this.overlayText = this.overlayText.slice(0, this.overlayText.length - 1)
-        else if(e.key.match(`^[A-Za-z]$`)) this.overlayText += e.key
+        else if(e.key.match(`^[A-Za-z ]$`)) this.overlayText += e.key
+      },
+      getHeroClass(hero) {
+        let classArray = []
+        if(this.overlayText !== '') {
+          ~hero.name.toLowerCase().indexOf(this.overlayText.toLowerCase()) ? classArray.push("matched") : classArray.push("filtered")
+        }
+        if(this.activatedHeroes.includes(hero.name)) classArray.push('activated')
+        return classArray
+      },
+      onMousedown(hero) {
+        if(this.activatedHeroes.includes(hero.name)) this.activatedHeroes.splice(this.activatedHeroes.indexOf(hero.name), 1)
+        else if(this.activatedHeroes.length < 2) this.activatedHeroes.push(hero.name)
       }
     }
   }
@@ -167,7 +185,35 @@ import Fab from './Fab'
 .Game .Hero {
   display: inline-block;
 }
-.Game .filterOverlay {
+.Game.ready .Hero {
+  pointer-events: none;
+}
+.Game.ready .Hero.activated {
+  pointer-events: unset;
+}
+.Game .Hero.hover {
+  position: relative;
+  left: 0;
+  bottom: 0;
+  z-index: 7;
+}
+.Game .Hero.activated .imgContainer {
+   box-shadow: 0px 0px 4px 3px rgba(255,255,100,1),
+    0px 0px 10px 4px rgba(255,255,100,1),
+    0px 0px 20px 6px rgba(255,255,100,1)!important;
+  z-index: 6;
+}
+.Game .Hero img {
+  transition: filter 300ms ease;
+}
+.Game .Hero.filtered img {
+  filter: grayscale(1) brightness(0.35);
+}
+.Game .Hero.matched .imgContainer {
+  box-shadow:
+    0px 0px 10px 0px rgba(255,255,255,1);
+}
+.Game .overlay {
   position: fixed;
   display: flex;
   align-items: center;
@@ -176,20 +222,48 @@ import Fab from './Fab'
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: rgba(0,0,0,0.5);
+  z-index: 5;
+  user-select: none;
+  pointer-events: none;
+  background-color: rgba(0,0,0,0.7);
+  opacity: 0;
+  transition: opacity 200ms ease;
+}
+.Game.ready .overlay {
+  opacity: 1;
+}
+.Game .filterText {
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.8); 
   color: rgba(255,255,255,0.95);
   text-transform: uppercase;
   letter-spacing: 4px;
   font-family: 'Open Sans';
   text-align: center;
+  overflow-wrap: break-word;
   font-size: 72px;
-  z-index: 5;
   user-select: none;
+  pointer-events: none;
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  user-select: none;
+  pointer-events: none;
+  z-index: 7;
 }
 .Game .Fab {
   position: fixed;
   right: 50px;
-  bottom: 15px;
+  bottom: 20px;
+  z-index: 9;
+}
+.Game.ready .Fab::before {
+  opacity: 1;
+  box-shadow: 0px 0px 70px 20px rgba(255,255,255, 0.5);
 }
 @media (max-width: 650px) {
   .Game .heroesContainer {

@@ -30,6 +30,7 @@
     0px 9px 12px 1px rgba(0, 0, 0, 0.14),
     0px 3px 16px 2px rgba(0, 0, 0, 0.12);
   user-select: none;
+  z-index: 1;
 }
 .Fab:hover {
   box-shadow: 
@@ -41,7 +42,7 @@
   height: 100%;
   width: 100%;
   opacity: 0;
-  transition: opacity 100ms linear; 
+  transition: opacity 200ms ease; 
   box-shadow: 0px 0px 35px 2px rgba(255,255,255, 0.5);
 }
 .Fab:hover::before {
