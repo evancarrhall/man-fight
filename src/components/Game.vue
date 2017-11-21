@@ -1,5 +1,5 @@
 <template>
-  <div class="Game" :class="{ready: activatedHeroes.length === 2}">
+  <div class="Game" :class="{ready: activatedHeroes.length === 2, fighting: isFighting}">
     
     <div class="heroesContainer">
       <div class="heroesByAttribute">
@@ -12,7 +12,7 @@
             :key="hero.name"
             :hero="hero"
             :class="getHeroClass(hero)"
-            :onMousedown = "onMousedown"
+            :onMousedown = "handleHeroMousedown"
           />
         </div>
       </div>
@@ -26,7 +26,7 @@
             :key="hero.name"
             :hero="hero"
             :class="getHeroClass(hero)"
-            :onMousedown = "onMousedown"
+            :onMousedown = "handleHeroMousedown"
           />
         </div>
       </div>
@@ -40,14 +40,20 @@
             :key="hero.name"
             :hero="hero"
             :class="getHeroClass(hero)"
-            :onMousedown = "onMousedown"
+            :onMousedown = "handleHeroMousedown"
           />
         </div>
       </div>
     </div>
     <div class="overlay"></div>
     <div class="filterText">{{overlayText}}</div>
-    <Fab class="fab" />
+    <Fab class="fab"
+      :text="isFighting ? 'CANCEL' : 'MAN FIGHT'"
+      :click="handleFabClick"   
+    />
+
+    <Fight :isFighting="isFighting" :heroes="activatedHeroes" />
+
     <!-- <div v-if="false">
       <div id="heroAreas">
         <Hero id="heroLeft" class="Hero" :updateHero="updateHeroLeft" :heroStatsObj="heroStatsObj" />
@@ -63,6 +69,7 @@ import heroData from '../assets/heroData.json'
 import Hero from './Hero'
 import FightResults from './FightResults'
 import Fab from './Fab'
+import Fight from './Fight'
 
   export default {
     name: 'Game',
@@ -70,6 +77,7 @@ import Fab from './Fab'
       Hero,
       FightResults,
       Fab,
+      Fight
     },
     data() {
       return {
@@ -79,6 +87,7 @@ import Fab from './Fab'
         overlayText: '',
         overlayCounter: null,
         activatedHeroes: [],
+        isFighting: false,
       }
     },
     computed: {
@@ -114,22 +123,27 @@ import Fab from './Fab'
         return Math.min( Math.floor( width / 54 ) , 22)
       },
       handleKeypress(e) {
-        e.preventDefault()
+        // e.preventDefault()
         if(e.key === 'Escape')  this.overlayText = ''
         else if(e.key === 'Backspace') this.overlayText = this.overlayText.slice(0, this.overlayText.length - 1)
         else if(e.key.match(`^[A-Za-z ]$`)) this.overlayText += e.key
       },
+
+      // 
       getHeroClass(hero) {
         let classArray = []
         if(this.overlayText !== '') {
           ~hero.name.toLowerCase().indexOf(this.overlayText.toLowerCase()) ? classArray.push("matched") : classArray.push("filtered")
         }
-        if(this.activatedHeroes.includes(hero.name)) classArray.push('activated')
+        if(this.activatedHeroes.includes(hero)) classArray.push('activated')
         return classArray
       },
-      onMousedown(hero) {
-        if(this.activatedHeroes.includes(hero.name)) this.activatedHeroes.splice(this.activatedHeroes.indexOf(hero.name), 1)
-        else if(this.activatedHeroes.length < 2) this.activatedHeroes.push(hero.name)
+      handleHeroMousedown(hero) {
+        if(this.activatedHeroes.includes(hero)) this.activatedHeroes.splice(this.activatedHeroes.indexOf(hero), 1)
+        else if(this.activatedHeroes.length < 2) this.activatedHeroes.push(hero)
+      },
+      handleFabClick() {
+        this.isFighting = !this.isFighting
       }
     }
   }
@@ -141,6 +155,9 @@ import Fab from './Fab'
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+.body, html {
+  font-smoothing: antialiased;
 }
 .Game {
   height: 100%;
@@ -203,6 +220,9 @@ import Fab from './Fab'
     0px 0px 20px 6px rgba(255,255,100,1)!important;
   z-index: 6;
 }
+.Game.fighting .Hero.activated .imgContainer {
+  z-index: 5;
+}
 .Game .Hero img {
   transition: filter 300ms ease;
 }
@@ -260,6 +280,9 @@ import Fab from './Fab'
   right: 50px;
   bottom: 20px;
   z-index: 9;
+}
+.Game.fighting .Fab img {
+  filter: hue-rotate(-130deg) saturate(170%) brightness(0.8) contrast(1.3);
 }
 .Game.ready .Fab::before {
   opacity: 1;

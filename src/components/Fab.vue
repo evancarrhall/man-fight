@@ -3,21 +3,27 @@
     @mouseover="()=>{}"
     @mouseout="()=>{}"
     @mousedown="()=>{}"
+    @click="handleClick"
   >
     <div class="imgContainer"><img src="../assets/fab.png" ></div>
-    <div class="text">MAN FIGHT</div>
+    <div class="text">{{text}}</div>
   </div>
 </template>
 
 <script>
   export default {
     name: 'Fab',
+    props: ['click', 'text'],
     data() {
       return {}
     },
     computed: {},
     mounted() {},
-    methods: {}
+    methods: {
+      handleClick() {
+        this.click && this.click()
+      }
+    }
   }
 </script>
 

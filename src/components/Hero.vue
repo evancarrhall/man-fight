@@ -9,7 +9,7 @@
     </div>
     <div class="newHeroLabel" v-if="hero.isNew">NEW</div>
     <div class="imgContainer">
-      <img :src="'/static/portraits/' + hero.img">
+      <img :src="'/static/portraits/npc_dota_hero_' + hero.img">
       <div class="hoverLabel" v-if="isHover">{{hero.name}}</div>
     </div>
   </div>

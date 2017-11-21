@@ -10,7 +10,7 @@
         "bat": 1.7,
         "armor": 1.43,
         "base_hps": 1.5,
-        "img": "npc_dota_hero_Abaddon.png"
+        "img": "Abaddon.png"
     },
     "Alchemist": {
         "name": "Alchemist",
@@ -23,7 +23,7 @@
         "bat": 1.7,
         "armor": 2.29,
         "base_hps": 1.5,
-        "img": "npc_dota_hero_Alchemist.png"
+        "img": "Alchemist.png"
     },
     "Ancient Apparition": {
         "name": "Ancient Apparition",
@@ -36,7 +36,7 @@
         "bat": 1.7,
         "armor": 1.86,
         "base_hps": 1.5,
-        "img": "npc_dota_hero_Ancient_Apparition.png"
+        "img": "Ancient_Apparition.png"
     },
     "Anti-Mage": {
         "name": "Anti-Mage",
@@ -49,7 +49,7 @@
         "bat": 1.45,
         "armor": 2.14,
         "base_hps": 1.5,
-        "img": "npc_dota_hero_antimage.png"
+        "img": "antimage.png"
     },
     "Arc Warden": {
         "name": "Arc Warden",
@@ -62,7 +62,7 @@
         "bat": 1.7,
         "armor": 0.14,
         "base_hps": 1.5,
-        "img": "npc_dota_hero_Arc_Warden.png"
+        "img": "Arc_Warden.png"
     },
     "Axe": {
         "name": "Axe",
@@ -75,7 +75,7 @@
         "bat": 1.7,
         "armor": 1.86,
         "base_hps": 4.25,
-        "img": "npc_dota_hero_Axe.png"
+        "img": "Axe.png"
     },
     "Bane": {
         "name": "Bane",
@@ -88,7 +88,7 @@
         "bat": 1.7,
         "armor": 4.29,
         "base_hps": 1.5,
-        "img": "npc_dota_hero_Bane.png"
+        "img": "Bane.png"
     },
     "Batrider": {
         "name": "Batrider",
@@ -101,7 +101,7 @@
         "bat": 1.7,
         "armor": 2.14,
         "base_hps": 3.25,
-        "img": "npc_dota_hero_Batrider.png"
+        "img": "Batrider.png"
     },
     "Beastmaster": {
         "name": "Beastmaster",
@@ -114,7 +114,7 @@
         "bat": 1.7,
         "armor": 4.57,
         "base_hps": 1.5,
-        "img": "npc_dota_hero_Beastmaster.png"
+        "img": "Beastmaster.png"
     },
     "Bloodseeker": {
         "name": "Bloodseeker",
@@ -127,7 +127,7 @@
         "bat": 1.7,
         "armor": 3.43,
         "base_hps": 1.5,
-        "img": "npc_dota_hero_Bloodseeker.png"
+        "img": "Bloodseeker.png"
     },
     "Bounty Hunter": {
         "name": "Bounty Hunter",
@@ -140,7 +140,7 @@
         "bat": 1.7,
         "armor": 6,
         "base_hps": 2,
-        "img": "npc_dota_hero_Bounty_Hunter.png"
+        "img": "Bounty_Hunter.png"
     },
     "Brewmaster": {
         "name": "Brewmaster",
@@ -153,7 +153,7 @@
         "bat": 1.7,
         "armor": 2.14,
         "base_hps": 2,
-        "img": "npc_dota_hero_Brewmaster.png"
+        "img": "Brewmaster.png"
     },
     "Bristleback": {
         "name": "Bristleback",
@@ -166,7 +166,7 @@
         "bat": 1.8,
         "armor": 3.43,
         "base_hps": 1.5,
-        "img": "npc_dota_hero_Bristleback.png"
+        "img": "Bristleback.png"
     },
     "Broodmother": {
         "name": "Broodmother",
@@ -179,7 +179,7 @@
         "bat": 1.7,
         "armor": 2.57,
         "base_hps": 1.5,
-        "img": "npc_dota_hero_Broodmother.png"
+        "img": "Broodmother.png"
     },
     "Centaur Warrunner": {
         "name": "Centaur Warrunner",
@@ -192,7 +192,7 @@
         "bat": 1.7,
         "armor": 2.14,
         "base_hps": 1.5,
-        "img": "npc_dota_hero_centaur.png"
+        "img": "centaur.png"
     },
     "Chaos Knight": {
         "name": "Chaos Knight",
@@ -205,7 +205,7 @@
         "bat": 1.7,
         "armor": 4,
         "base_hps": 1.5,
-        "img": "npc_dota_hero_Chaos_Knight.png"
+        "img": "Chaos_Knight.png"
     },
     "Chen": {
         "name": "Chen",
@@ -218,7 +218,7 @@
         "bat": 1.7,
         "armor": 1.14,
         "base_hps": 1.5,
-        "img": "npc_dota_hero_Chen.png"
+        "img": "Chen.png"
     },
     "Clinkz": {
         "name": "Clinkz",
@@ -231,7 +231,7 @@
         "bat": 1.7,
         "armor": 2.14,
         "base_hps": 1.5,
-        "img": "npc_dota_hero_Clinkz.png"
+        "img": "Clinkz.png"
     },
     "Clockwerk": {
         "name": "Clockwerk",
@@ -244,7 +244,7 @@
         "bat": 1.7,
         "armor": 1.86,
         "base_hps": 1.5,
-        "img": "npc_dota_hero_rattletrap.png"
+        "img": "rattletrap.png"
     },
     "Crystal Maiden": {
         "name": "Crystal Maiden",
@@ -257,7 +257,7 @@
         "bat": 1.7,
         "armor": 1.29,
         "base_hps": 1.5,
-        "img": "npc_dota_hero_Crystal_Maiden.png"
+        "img": "Crystal_Maiden.png"
     },
     "Dark Seer": {
         "name": "Dark Seer",
@@ -270,7 +270,7 @@
         "bat": 1.7,
         "armor": 6.71,
         "base_hps": 1.5,
-        "img": "npc_dota_hero_Dark_Seer.png"
+        "img": "Dark_Seer.png"
     },
     "Dark Willow": {
         "name": "Dark Willow",
@@ -283,7 +283,7 @@
         "bat": 1.3,
         "armor": 1.57,
         "base_hps": 1.5,
-        "img": "npc_dota_hero_Dark_Willow.png",
+        "img": "Dark_Willow.png",
         "isNew": true
     },
     "Dazzle": {
@@ -297,7 +297,7 @@
         "bat": 1.7,
         "armor": 2,
         "base_hps": 1.5,
-        "img": "npc_dota_hero_Dazzle.png"
+        "img": "Dazzle.png"
     },
     "Death Prophet": {
         "name": "Death Prophet",
@@ -310,7 +310,7 @@
         "bat": 1.7,
         "armor": 3,
         "base_hps": 2,
-        "img": "npc_dota_hero_Death_Prophet.png"
+        "img": "Death_Prophet.png"
     },
     "Disruptor": {
         "name": "Disruptor",
@@ -323,7 +323,7 @@
         "bat": 1.7,
         "armor": 1.14,
         "base_hps": 1.5,
-        "img": "npc_dota_hero_Disruptor.png"
+        "img": "Disruptor.png"
     },
     "Doom": {
         "name": "Doom",
@@ -336,7 +336,7 @@
         "bat": 2,
         "armor": 0.57,
         "base_hps": 1.5,
-        "img": "npc_dota_hero_doom_bringer.png"
+        "img": "doom_bringer.png"
     },
     "Dragon Knight": {
         "name": "Dragon Knight",
@@ -349,7 +349,7 @@
         "bat": 1.7,
         "armor": 3.71,
         "base_hps": 1.5,
-        "img": "npc_dota_hero_Dragon_Knight.png"
+        "img": "Dragon_Knight.png"
     },
     "Drow Ranger": {
         "name": "Drow Ranger",
@@ -362,7 +362,7 @@
         "bat": 1.7,
         "armor": 0.71,
         "base_hps": 1.5,
-        "img": "npc_dota_hero_Drow_Ranger.png"
+        "img": "Drow_Ranger.png"
     },
     "Earth Spirit": {
         "name": "Earth Spirit",
@@ -375,7 +375,7 @@
         "bat": 1.7,
         "armor": 3.43,
         "base_hps": 1.5,
-        "img": "npc_dota_hero_Earth_Spirit.png"
+        "img": "Earth_Spirit.png"
     },
     "Earthshaker": {
         "name": "Earthshaker",
@@ -388,7 +388,7 @@
         "bat": 1.7,
         "armor": 2.71,
         "base_hps": 2,
-        "img": "npc_dota_hero_Earthshaker.png"
+        "img": "Earthshaker.png"
     },
     "Elder Titan": {
         "name": "Elder Titan",
@@ -401,7 +401,7 @@
         "bat": 1.7,
         "armor": 3,
         "base_hps": 1.5,
-        "img": "npc_dota_hero_Elder_Titan.png"
+        "img": "Elder_Titan.png"
     },
     "Ember Spirit": {
         "name": "Ember Spirit",
@@ -414,7 +414,7 @@
         "bat": 1.7,
         "armor": 1.14,
         "base_hps": 2,
-        "img": "npc_dota_hero_Ember_Spirit.png"
+        "img": "Ember_Spirit.png"
     },
     "Enchantress": {
         "name": "Enchantress",
@@ -427,7 +427,7 @@
         "bat": 1.7,
         "armor": 0.71,
         "base_hps": 1.5,
-        "img": "npc_dota_hero_Enchantress.png"
+        "img": "Enchantress.png"
     },
     "Enigma": {
         "name": "Enigma",
@@ -440,7 +440,7 @@
         "bat": 1.7,
         "armor": 4,
         "base_hps": 1.5,
-        "img": "npc_dota_hero_Enigma.png"
+        "img": "Enigma.png"
     },
     "Faceless Void": {
         "name": "Faceless Void",
@@ -453,7 +453,7 @@
         "bat": 1.7,
         "armor": 3.29,
         "base_hps": 2,
-        "img": "npc_dota_hero_Faceless_Void.png"
+        "img": "Faceless_Void.png"
     },
     "Gyrocopter": {
         "name": "Gyrocopter",
@@ -466,7 +466,7 @@
         "bat": 1.7,
         "armor": 4.43,
         "base_hps": 1.5,
-        "img": "npc_dota_hero_Gyrocopter.png"
+        "img": "Gyrocopter.png"
     },
     "Huskar": {
         "name": "Huskar",
@@ -479,7 +479,7 @@
         "bat": 1.6,
         "armor": 1.14,
         "base_hps": 1.5,
-        "img": "npc_dota_hero_Huskar.png"
+        "img": "Huskar.png"
     },
     "Invoker": {
         "name": "Invoker",
@@ -492,7 +492,7 @@
         "bat": 1.7,
         "armor": 1,
         "base_hps": 0,
-        "img": "npc_dota_hero_Invoker.png"
+        "img": "Invoker.png"
     },
     "Io": {
         "name": "Io",
@@ -505,7 +505,7 @@
         "bat": 1.7,
         "armor": 0,
         "base_hps": 1.5,
-        "img": "npc_dota_hero_wisp.png"
+        "img": "wisp.png"
     },
     "Jakiro": {
         "name": "Jakiro",
@@ -518,7 +518,7 @@
         "bat": 1.7,
         "armor": 2.43,
         "base_hps": 1.5,
-        "img": "npc_dota_hero_Jakiro.png"
+        "img": "Jakiro.png"
     },
     "Juggernaut": {
         "name": "Juggernaut",
@@ -531,7 +531,7 @@
         "bat": 1.4,
         "armor": 3.71,
         "base_hps": 2,
-        "img": "npc_dota_hero_Juggernaut.png"
+        "img": "Juggernaut.png"
     },
     "Keeper of the Light": {
         "name": "Keeper of the Light",
@@ -544,7 +544,7 @@
         "bat": 1.7,
         "armor": 1.14,
         "base_hps": 1.5,
-        "img": "npc_dota_hero_Keeper_of_the_Light.png"
+        "img": "Keeper_of_the_Light.png"
     },
     "Kunkka": {
         "name": "Kunkka",
@@ -557,7 +557,7 @@
         "bat": 1.7,
         "armor": 4,
         "base_hps": 1.5,
-        "img": "npc_dota_hero_Kunkka.png"
+        "img": "Kunkka.png"
     },
     "Legion Commander": {
         "name": "Legion Commander",
@@ -570,7 +570,7 @@
         "bat": 1.7,
         "armor": 2.57,
         "base_hps": 1.5,
-        "img": "npc_dota_hero_Legion_Commander.png"
+        "img": "Legion_Commander.png"
     },
     "Leshrac": {
         "name": "Leshrac",
@@ -583,7 +583,7 @@
         "bat": 1.7,
         "armor": 3.29,
         "base_hps": 1.5,
-        "img": "npc_dota_hero_Leshrac.png"
+        "img": "Leshrac.png"
     },
     "Lich": {
         "name": "Lich",
@@ -596,7 +596,7 @@
         "bat": 1.7,
         "armor": 1.14,
         "base_hps": 1.5,
-        "img": "npc_dota_hero_Lich.png"
+        "img": "Lich.png"
     },
     "Lifestealer": {
         "name": "Lifestealer",
@@ -609,7 +609,7 @@
         "bat": 1.85,
         "armor": 1.57,
         "base_hps": 1.5,
-        "img": "npc_dota_hero_life_stealer.png"
+        "img": "life_stealer.png"
     },
     "Lina": {
         "name": "Lina",
@@ -622,7 +622,7 @@
         "bat": 1.6,
         "armor": 1.29,
         "base_hps": 1.5,
-        "img": "npc_dota_hero_Lina.png"
+        "img": "Lina.png"
     },
     "Lion": {
         "name": "Lion",
@@ -635,7 +635,7 @@
         "bat": 1.7,
         "armor": 1.14,
         "base_hps": 0,
-        "img": "npc_dota_hero_Lion.png"
+        "img": "Lion.png"
     },
     "Lone Druid": {
         "name": "Lone Druid",
@@ -648,7 +648,7 @@
         "bat": 1.7,
         "armor": 3.43,
         "base_hps": 1.75,
-        "img": "npc_dota_hero_Lone_Druid.png"
+        "img": "Lone_Druid.png"
     },
     "Luna": {
         "name": "Luna",
@@ -661,7 +661,7 @@
         "bat": 1.7,
         "armor": 2.57,
         "base_hps": 1.5,
-        "img": "npc_dota_hero_Luna.png"
+        "img": "Luna.png"
     },
     "Lycan": {
         "name": "Lycan",
@@ -674,7 +674,7 @@
         "bat": 1.7,
         "armor": 3.29,
         "base_hps": 1.5,
-        "img": "npc_dota_hero_Lycan.png"
+        "img": "Lycan.png"
     },
     "Magnus": {
         "name": "Magnus",
@@ -687,7 +687,7 @@
         "bat": 1.8,
         "armor": 4.14,
         "base_hps": 2,
-        "img": "npc_dota_hero_magnataur.png"
+        "img": "magnataur.png"
     },
     "Medusa": {
         "name": "Medusa",
@@ -700,7 +700,7 @@
         "bat": 1.7,
         "armor": 1.86,
         "base_hps": 1.5,
-        "img": "npc_dota_hero_Medusa.png"
+        "img": "Medusa.png"
     },
     "Meepo": {
         "name": "Meepo",
@@ -713,7 +713,7 @@
         "bat": 1.7,
         "armor": 2.29,
         "base_hps": 1.5,
-        "img": "npc_dota_hero_Meepo.png"
+        "img": "Meepo.png"
     },
     "Mirana": {
         "name": "Mirana",
@@ -726,7 +726,7 @@
         "bat": 1.7,
         "armor": 1.86,
         "base_hps": 1.5,
-        "img": "npc_dota_hero_Mirana.png"
+        "img": "Mirana.png"
     },
     "Monkey King": {
         "name": "Monkey King",
@@ -739,7 +739,7 @@
         "bat": 1.7,
         "armor": 0.14,
         "base_hps": 3,
-        "img": "npc_dota_hero_Monkey_King.png"
+        "img": "Monkey_King.png"
     },
     "Morphling": {
         "name": "Morphling",
@@ -752,7 +752,7 @@
         "bat": 1.5,
         "armor": 1.43,
         "base_hps": 1.5,
-        "img": "npc_dota_hero_Morphling.png"
+        "img": "Morphling.png"
     },
     "Naga Siren": {
         "name": "Naga Siren",
@@ -765,7 +765,7 @@
         "bat": 1.7,
         "armor": 6,
         "base_hps": 3,
-        "img": "npc_dota_hero_Naga_Siren.png"
+        "img": "Naga_Siren.png"
     },
     "Nature's Prophet": {
         "name": "Nature's Prophet",
@@ -778,7 +778,7 @@
         "bat": 1.7,
         "armor": 3.57,
         "base_hps": 1.5,
-        "img": "npc_dota_hero_furion.png"
+        "img": "furion.png"
     },
     "Necrophos": {
         "name": "Necrophos",
@@ -791,7 +791,7 @@
         "bat": 1.7,
         "armor": 3.14,
         "base_hps": 1.5,
-        "img": "npc_dota_hero_necrolyte.png"
+        "img": "necrolyte.png"
     },
     "Night Stalker": {
         "name": "Night Stalker",
@@ -804,7 +804,7 @@
         "bat": 1.7,
         "armor": 5.57,
         "base_hps": 3.25,
-        "img": "npc_dota_hero_Night_Stalker.png"
+        "img": "Night_Stalker.png"
     },
     "Nyx Assassin": {
         "name": "Nyx Assassin",
@@ -817,7 +817,7 @@
         "bat": 1.7,
         "armor": 3.71,
         "base_hps": 4.75,
-        "img": "npc_dota_hero_Nyx_Assassin.png"
+        "img": "Nyx_Assassin.png"
     },
     "Ogre Magi": {
         "name": "Ogre Magi",
@@ -830,7 +830,7 @@
         "bat": 1.7,
         "armor": 8,
         "base_hps": 3.25,
-        "img": "npc_dota_hero_Ogre_Magi.png"
+        "img": "Ogre_Magi.png"
     },
     "Omniknight": {
         "name": "Omniknight",
@@ -843,7 +843,7 @@
         "bat": 1.7,
         "armor": 5.14,
         "base_hps": 1.5,
-        "img": "npc_dota_hero_Omniknight.png"
+        "img": "Omniknight.png"
     },
     "Oracle": {
         "name": "Oracle",
@@ -856,7 +856,7 @@
         "bat": 1.4,
         "armor": 2.14,
         "base_hps": 1.5,
-        "img": "npc_dota_hero_Oracle.png"
+        "img": "Oracle.png"
     },
     "Outworld Devourer": {
         "name": "Outworld Devourer",
@@ -869,7 +869,7 @@
         "bat": 1.7,
         "armor": 3.93,
         "base_hps": 1.5,
-        "img": "npc_dota_hero_obsidian_destroyer.png"
+        "img": "obsidian_destroyer.png"
     },
     "Pangolier": {
         "name": "Pangolier",
@@ -882,7 +882,7 @@
         "bat": 1.7,
         "armor": 3.57,
         "base_hps": 1.5,
-        "img": "npc_dota_hero_Pangolier.png",
+        "img": "Pangolier.png",
         "isNew": true
     },
     "Phantom Assassin": {
@@ -896,7 +896,7 @@
         "bat": 1.7,
         "armor": 4.29,
         "base_hps": 1.5,
-        "img": "npc_dota_hero_Phantom_Assassin.png"
+        "img": "Phantom_Assassin.png"
     },
     "Phantom Lancer": {
         "name": "Phantom Lancer",
@@ -909,7 +909,7 @@
         "bat": 1.7,
         "armor": 4.14,
         "base_hps": 3,
-        "img": "npc_dota_hero_Phantom_Lancer.png"
+        "img": "Phantom_Lancer.png"
     },
     "Phoenix": {
         "name": "Phoenix",
@@ -922,7 +922,7 @@
         "bat": 1.7,
         "armor": -0.29,
         "base_hps": 1.5,
-        "img": "npc_dota_hero_Phoenix.png"
+        "img": "Phoenix.png"
     },
     "Puck": {
         "name": "Puck",
@@ -935,7 +935,7 @@
         "bat": 1.7,
         "armor": 1.14,
         "base_hps": 1.5,
-        "img": "npc_dota_hero_Puck.png"
+        "img": "Puck.png"
     },
     "Pudge": {
         "name": "Pudge",
@@ -948,7 +948,7 @@
         "bat": 1.7,
         "armor": 1,
         "base_hps": 1.5,
-        "img": "npc_dota_hero_Pudge.png"
+        "img": "Pudge.png"
     },
     "Pugna": {
         "name": "Pugna",
@@ -961,7 +961,7 @@
         "bat": 1.7,
         "armor": 1.29,
         "base_hps": 1.5,
-        "img": "npc_dota_hero_Pugna.png"
+        "img": "Pugna.png"
     },
     "Queen of Pain": {
         "name": "Queen of Pain",
@@ -974,7 +974,7 @@
         "bat": 1.5,
         "armor": 1.57,
         "base_hps": 1.5,
-        "img": "npc_dota_hero_queenofpain.png"
+        "img": "queenofpain.png"
     },
     "Razor": {
         "name": "Razor",
@@ -987,7 +987,7 @@
         "bat": 1.7,
         "armor": 2.14,
         "base_hps": 1.5,
-        "img": "npc_dota_hero_Razor.png"
+        "img": "Razor.png"
     },
     "Riki": {
         "name": "Riki",
@@ -1000,7 +1000,7 @@
         "bat": 1.7,
         "armor": 4.86,
         "base_hps": 1.5,
-        "img": "npc_dota_hero_Riki.png"
+        "img": "Riki.png"
     },
     "Rubick": {
         "name": "Rubick",
@@ -1013,7 +1013,7 @@
         "bat": 1.7,
         "armor": 1,
         "base_hps": 1.5,
-        "img": "npc_dota_hero_Rubick.png"
+        "img": "Rubick.png"
     },
     "Sand King": {
         "name": "Sand King",
@@ -1026,7 +1026,7 @@
         "bat": 1.7,
         "armor": 2.71,
         "base_hps": 1.5,
-        "img": "npc_dota_hero_Sand_King.png"
+        "img": "Sand_King.png"
     },
     "Shadow Demon": {
         "name": "Shadow Demon",
@@ -1039,7 +1039,7 @@
         "bat": 1.7,
         "armor": 2.57,
         "base_hps": 1.5,
-        "img": "npc_dota_hero_Shadow_Demon.png"
+        "img": "Shadow_Demon.png"
     },
     "Shadow Fiend": {
         "name": "Shadow Fiend",
@@ -1052,7 +1052,7 @@
         "bat": 1.7,
         "armor": 0.86,
         "base_hps": 1.75,
-        "img": "npc_dota_hero_nevermore.png"
+        "img": "nevermore.png"
     },
     "Shadow Shaman": {
         "name": "Shadow Shaman",
@@ -1065,7 +1065,7 @@
         "bat": 1.7,
         "armor": 2.29,
         "base_hps": 1.5,
-        "img": "npc_dota_hero_Shadow_Shaman.png"
+        "img": "Shadow_Shaman.png"
     },
     "Silencer": {
         "name": "Silencer",
@@ -1078,7 +1078,7 @@
         "bat": 1.7,
         "armor": 2.14,
         "base_hps": 1.5,
-        "img": "npc_dota_hero_Silencer.png"
+        "img": "Silencer.png"
     },
     "Skywrath Mage": {
         "name": "Skywrath Mage",
@@ -1091,7 +1091,7 @@
         "bat": 1.7,
         "armor": -0.14,
         "base_hps": 1.5,
-        "img": "npc_dota_hero_Skywrath_Mage.png"
+        "img": "Skywrath_Mage.png"
     },
     "Slardar": {
         "name": "Slardar",
@@ -1104,7 +1104,7 @@
         "bat": 1.7,
         "armor": 5.43,
         "base_hps": 1.5,
-        "img": "npc_dota_hero_Slardar.png"
+        "img": "Slardar.png"
     },
     "Slark": {
         "name": "Slark",
@@ -1117,7 +1117,7 @@
         "bat": 1.7,
         "armor": 2,
         "base_hps": 1.5,
-        "img": "npc_dota_hero_Slark.png"
+        "img": "Slark.png"
     },
     "Sniper": {
         "name": "Sniper",
@@ -1130,7 +1130,7 @@
         "bat": 1.7,
         "armor": 2,
         "base_hps": 1.5,
-        "img": "npc_dota_hero_Sniper.png"
+        "img": "Sniper.png"
     },
     "Spectre": {
         "name": "Spectre",
@@ -1143,7 +1143,7 @@
         "bat": 1.7,
         "armor": 3.29,
         "base_hps": 1.5,
-        "img": "npc_dota_hero_Spectre.png"
+        "img": "Spectre.png"
     },
     "Spirit Breaker": {
         "name": "Spirit Breaker",
@@ -1156,7 +1156,7 @@
         "bat": 1.9,
         "armor": 5.43,
         "base_hps": 2,
-        "img": "npc_dota_hero_Spirit_Breaker.png"
+        "img": "Spirit_Breaker.png"
     },
     "Storm Spirit": {
         "name": "Storm Spirit",
@@ -1169,7 +1169,7 @@
         "bat": 1.7,
         "armor": 5.14,
         "base_hps": 1.5,
-        "img": "npc_dota_hero_Storm_Spirit.png"
+        "img": "Storm_Spirit.png"
     },
     "Sven": {
         "name": "Sven",
@@ -1182,7 +1182,7 @@
         "bat": 1.8,
         "armor": 5,
         "base_hps": 1.5,
-        "img": "npc_dota_hero_Sven.png"
+        "img": "Sven.png"
     },
     "Techies": {
         "name": "Techies",
@@ -1195,7 +1195,7 @@
         "bat": 1.7,
         "armor": 7,
         "base_hps": 1.5,
-        "img": "npc_dota_hero_Techies.png"
+        "img": "Techies.png"
     },
     "Templar Assassin": {
         "name": "Templar Assassin",
@@ -1208,7 +1208,7 @@
         "bat": 1.7,
         "armor": 4.29,
         "base_hps": 1.5,
-        "img": "npc_dota_hero_Templar_Assassin.png"
+        "img": "Templar_Assassin.png"
     },
     "Terrorblade": {
         "name": "Terrorblade",
@@ -1221,7 +1221,7 @@
         "bat": 1.5,
         "armor": 10.14,
         "base_hps": 3.25,
-        "img": "npc_dota_hero_Terrorblade.png"
+        "img": "Terrorblade.png"
     },
     "Tidehunter": {
         "name": "Tidehunter",
@@ -1234,7 +1234,7 @@
         "bat": 1.7,
         "armor": 3.14,
         "base_hps": 1.5,
-        "img": "npc_dota_hero_Tidehunter.png"
+        "img": "Tidehunter.png"
     },
     "Timbersaw": {
         "name": "Timbersaw",
@@ -1247,7 +1247,7 @@
         "bat": 1.7,
         "armor": 0.29,
         "base_hps": 1.5,
-        "img": "npc_dota_hero_shredder.png"
+        "img": "shredder.png"
     },
     "Tinker": {
         "name": "Tinker",
@@ -1260,7 +1260,7 @@
         "bat": 1.7,
         "armor": 3.86,
         "base_hps": 1.5,
-        "img": "npc_dota_hero_Tinker.png"
+        "img": "Tinker.png"
     },
     "Tiny": {
         "name": "Tiny",
@@ -1273,7 +1273,7 @@
         "bat": 1.7,
         "armor": 0,
         "base_hps": 2.5,
-        "img": "npc_dota_hero_Tiny.png"
+        "img": "Tiny.png"
     },
     "Treant Protector": {
         "name": "Treant Protector",
@@ -1286,7 +1286,7 @@
         "bat": 1.9,
         "armor": 1.14,
         "base_hps": 1.5,
-        "img": "npc_dota_hero_treant.png"
+        "img": "treant.png"
     },
     "Troll Warlord": {
         "name": "Troll Warlord",
@@ -1299,7 +1299,7 @@
         "bat": 1.7,
         "armor": 2,
         "base_hps": 1.5,
-        "img": "npc_dota_hero_Troll_Warlord.png"
+        "img": "Troll_Warlord.png"
     },
     "Tusk": {
         "name": "Tusk",
@@ -1312,7 +1312,7 @@
         "bat": 1.7,
         "armor": 3.29,
         "base_hps": 1.5,
-        "img": "npc_dota_hero_Tusk.png"
+        "img": "Tusk.png"
     },
     "Underlord": {
         "name": "Underlord",
@@ -1325,7 +1325,7 @@
         "bat": 1.7,
         "armor": 3.71,
         "base_hps": 1.5,
-        "img": "npc_dota_hero_abyssal_underlord.png"
+        "img": "abyssal_underlord.png"
     },
     "Undying": {
         "name": "Undying",
@@ -1338,7 +1338,7 @@
         "bat": 1.7,
         "armor": 4.43,
         "base_hps": 1.5,
-        "img": "npc_dota_hero_Undying.png"
+        "img": "Undying.png"
     },
     "Ursa": {
         "name": "Ursa",
@@ -1351,7 +1351,7 @@
         "bat": 1.7,
         "armor": 5.57,
         "base_hps": 2,
-        "img": "npc_dota_hero_Ursa.png"
+        "img": "Ursa.png"
     },
     "Vengeful Spirit": {
         "name": "Vengeful Spirit",
@@ -1364,7 +1364,7 @@
         "bat": 1.7,
         "armor": 3.86,
         "base_hps": 1.5,
-        "img": "npc_dota_hero_vengefulspirit.png"
+        "img": "vengefulspirit.png"
     },
     "Venomancer": {
         "name": "Venomancer",
@@ -1377,7 +1377,7 @@
         "bat": 1.7,
         "armor": 3.14,
         "base_hps": 1.5,
-        "img": "npc_dota_hero_Venomancer.png"
+        "img": "Venomancer.png"
     },
     "Viper": {
         "name": "Viper",
@@ -1390,7 +1390,7 @@
         "bat": 1.7,
         "armor": 4.5,
         "base_hps": 1.5,
-        "img": "npc_dota_hero_Viper.png"
+        "img": "Viper.png"
     },
     "Visage": {
         "name": "Visage",
@@ -1403,7 +1403,7 @@
         "bat": 1.7,
         "armor": -0.43,
         "base_hps": 1.5,
-        "img": "npc_dota_hero_Visage.png"
+        "img": "Visage.png"
     },
     "Warlock": {
         "name": "Warlock",
@@ -1416,7 +1416,7 @@
         "bat": 1.7,
         "armor": 2.43,
         "base_hps": 1.5,
-        "img": "npc_dota_hero_Warlock.png"
+        "img": "Warlock.png"
     },
     "Weaver": {
         "name": "Weaver",
@@ -1429,7 +1429,7 @@
         "bat": 1.8,
         "armor": 1,
         "base_hps": 1.5,
-        "img": "npc_dota_hero_Weaver.png"
+        "img": "Weaver.png"
     },
     "Windranger": {
         "name": "Windranger",
@@ -1442,7 +1442,7 @@
         "bat": 1.5,
         "armor": 1.43,
         "base_hps": 1.5,
-        "img": "npc_dota_hero_windrunner.png"
+        "img": "windrunner.png"
     },
     "Winter Wyvern": {
         "name": "Winter Wyvern",
@@ -1455,7 +1455,7 @@
         "bat": 1.7,
         "armor": 1.29,
         "base_hps": 1.5,
-        "img": "npc_dota_hero_Winter_Wyvern.png"
+        "img": "Winter_Wyvern.png"
     },
     "Witch Doctor": {
         "name": "Witch Doctor",
@@ -1468,7 +1468,7 @@
         "bat": 1.7,
         "armor": 0.86,
         "base_hps": 1.5,
-        "img": "npc_dota_hero_Witch_Doctor.png"
+        "img": "Witch_Doctor.png"
     },
     "Wraith King": {
         "name": "Wraith King",
@@ -1481,7 +1481,7 @@
         "bat": 1.7,
         "armor": 2.57,
         "base_hps": 1.5,
-        "img": "npc_dota_hero_skeleton_king.png"
+        "img": "skeleton_king.png"
     },
     "Zeus": {
         "name": "Zeus",
@@ -1494,6 +1494,6 @@
         "bat": 1.7,
         "armor": 1.57,
         "base_hps": 1.5,
-        "img": "npc_dota_hero_zuus.png"
+        "img": "zuus.png"
     }
 }
