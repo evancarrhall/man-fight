@@ -5,7 +5,7 @@ let stats = hs.stats
 // const portraits = fs.readdirSync('../../static/portraits/')
 
 let heroData = {}
-stats = stats.split('\n').map(x => x.split(','))
+stats = stats.split('\n').map(x => x.split('\t'))
 for(const row of stats) {
   let nameArr = []
   for(const item of row[0].split(' ')) {
@@ -24,7 +24,7 @@ for(const row of stats) {
   heroData[name].bat = parseFloat(row[19])
   heroData[name].armor = parseFloat(row[15])
   heroData[name].base_hps = parseFloat(row[26])
-  heroData[name].img = "npc_dota_hero_" + name.split(' ').join('_') + ".png"
+  heroData[name].img = name.split(' ').join('_') + ".png"
 }
 
 fixNonStandardHeroImgs()
@@ -58,6 +58,6 @@ function fixNonStandardHeroImgs() {
     heroData['Zeus'].img = toPortraitPath('zuus')
 
     function toPortraitPath(heroName) {
-        return "npc_dota_hero_" + heroName  + '.png'
+        return heroName  + '.png'
     }
 }

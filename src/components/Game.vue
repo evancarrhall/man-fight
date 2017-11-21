@@ -52,7 +52,7 @@
       :click="handleFabClick"   
     />
 
-    <Fight :isFighting="isFighting" :heroes="activatedHeroes" />
+    <Fight v-if="isFighting" :isFighting="isFighting" :heroes="activatedHeroes" />
 
     <!-- <div v-if="false">
       <div id="heroAreas">
@@ -67,7 +67,6 @@
 <script>
 import heroData from '../assets/heroData.json'
 import Hero from './Hero'
-import FightResults from './FightResults'
 import Fab from './Fab'
 import Fight from './Fight'
 
@@ -75,7 +74,6 @@ import Fight from './Fight'
     name: 'Game',
     components: {
       Hero,
-      FightResults,
       Fab,
       Fight
     },
@@ -143,7 +141,7 @@ import Fight from './Fight'
         else if(this.activatedHeroes.length < 2) this.activatedHeroes.push(hero)
       },
       handleFabClick() {
-        this.isFighting = !this.isFighting
+        if(this.activatedHeroes.length === 2) this.isFighting = !this.isFighting
       }
     }
   }
@@ -207,6 +205,9 @@ import Fight from './Fight'
 }
 .Game.ready .Hero.activated {
   pointer-events: unset;
+}
+.Game.fighting .Hero.activated {
+  pointer-events: none;
 }
 .Game .Hero.hover {
   position: relative;
@@ -280,6 +281,12 @@ import Fight from './Fight'
   right: 50px;
   bottom: 20px;
   z-index: 9;
+}
+.Game .Fab img {
+  filter: brightness(120%) saturate(0%) contrast(160%);
+}
+.Game.ready .Fab img {
+  filter: unset;
 }
 .Game.fighting .Fab img {
   filter: hue-rotate(-130deg) saturate(170%) brightness(0.8) contrast(1.3);

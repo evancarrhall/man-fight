@@ -2,7 +2,7 @@
   <div class="FightHero">
     <div class="healthbar">
       <div class="empty"></div>
-      <div class="full"></div>
+      <div class="full" :style="{width: Math.max(hero.hp / hero.hp_max * 100, 0) + '%'}"></div>
     </div>
     <img :src="'/static/landscapes/' + hero.img">
     <div class="name">{{hero.name}}</div>
@@ -30,14 +30,14 @@
   width: 256px;
   display: flex;
   flex-flow: column-reverse;
-  background-color: rgba(0,0,0,0.8)
+  background-color: rgba(0,0,0,0.1)
 }
 .FightHero .name {
-  position: absolute;
+  /* position: absolute;
   top: 0;
   left: 0;
-  right: 0;
-  margin-top: -25px;
+  right: 0; */
+  margin-bottom: 5px;
   /* background-color: rgba(20,20,20,0.45); */
   color: rgba(255,255,255,0.95);
   text-transform: uppercase;
@@ -70,7 +70,7 @@
 .FightHero .healthbar .full {
   position: absolute;
   left:0;
-  width: 76%;
+  width: 100%;
   height: 100%;
   background-color: rgba(120, 190, 120, 0.9);
 }

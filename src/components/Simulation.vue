@@ -54,8 +54,8 @@
       simulateTicks() {
         while(this.heroLeft.hp >= 0 && this.heroRight.hp >= 0) {
           //simulates one tick and end if hp is less than zero
-          let hl = Object.assign({}, this.heroLeft)
-          let hr = Object.assign({}, this.heroRight)
+          let hl = this.heroLeft
+          let hr = this.heroRight
 
           // hps
           hl.hp += hl.heal_per_tick
