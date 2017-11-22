@@ -141,7 +141,10 @@ import Fight from './Fight'
         else if(this.activatedHeroes.length < 2) this.activatedHeroes.push(hero)
       },
       handleFabClick() {
-        if(this.activatedHeroes.length === 2) this.isFighting = !this.isFighting
+        if(this.activatedHeroes.length === 2) {
+          this.overlayText = ''
+          this.isFighting = !this.isFighting
+        }
       }
     }
   }
