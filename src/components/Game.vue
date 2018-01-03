@@ -1,6 +1,11 @@
 <template>
   <div class="Game" :class="{ready: activatedHeroes.length === 2, fighting: isFighting}">
 
+      <Fab class="fab"
+        :text="isFighting ? 'CANCEL' : 'MAN FIGHT'"
+        :click="handleFabClick"   
+      />
+
       <div class="heroesContainer">
         <div class="heroesByAttribute">
           <div class="attributeLabelContainer">
@@ -47,13 +52,9 @@
       </div>
       <div class="overlay"></div>
       <div class="filterText">{{overlayText}}</div>
-      <Fab class="fab"
-        :text="isFighting ? 'CANCEL' : 'MAN FIGHT'"
-        :click="handleFabClick"   
-      />
 
       <Fight v-if="isFighting" :isFighting="isFighting" :heroes="activatedHeroes" />
-      
+
   </div>
 </template>
 
