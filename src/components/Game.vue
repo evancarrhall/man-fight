@@ -1,59 +1,59 @@
 <template>
   <div class="Game" :class="{ready: activatedHeroes.length === 2, fighting: isFighting}">
-    
-    <div class="heroesContainer">
-      <div class="heroesByAttribute">
-        <div class="attributeLabelContainer">
-          <div class="attributeLabel">STRENGTH</div>
-        </div>
-        <div class="heroes" ref="heroes" :style="{width: numberOfColumns * 54 + 'px'}">
-          <Hero 
-            v-for="hero of heroesByAttr.str" 
-            :key="hero.name"
-            :hero="hero"
-            :class="getHeroClass(hero)"
-            :onMousedown="handleHeroMousedown"
-          />
-        </div>
-      </div>
-      <div class="heroesByAttribute">
-        <div class="attributeLabelContainer">
-          <div class="attributeLabel">AGILITY</div>
-        </div>
-        <div class="heroes" :style="{width: numberOfColumns * 54 + 'px'}">
-          <Hero 
-            v-for="hero of heroesByAttr.agi" 
-            :key="hero.name"
-            :hero="hero"
-            :class="getHeroClass(hero)"
-            :onMousedown = "handleHeroMousedown"
-          />
-        </div>
-      </div>
-      <div class="heroesByAttribute last">
-        <div class="attributeLabelContainer">
-          <div class="attributeLabel">INTELLIGENCE</div>
-        </div>
-        <div class="heroes" :style="{width: numberOfColumns * 54 + 'px'}">
-          <Hero 
-            v-for="hero of heroesByAttr.int" 
-            :key="hero.name"
-            :hero="hero"
-            :class="getHeroClass(hero)"
-            :onMousedown = "handleHeroMousedown"
-          />
-        </div>
-      </div>
-    </div>
-    <div class="overlay"></div>
-    <div class="filterText">{{overlayText}}</div>
-    <Fab class="fab"
-      :text="isFighting ? 'CANCEL' : 'MAN FIGHT'"
-      :click="handleFabClick"   
-    />
 
-    <Fight v-if="isFighting" :isFighting="isFighting" :heroes="activatedHeroes" />
+      <div class="heroesContainer">
+        <div class="heroesByAttribute">
+          <div class="attributeLabelContainer">
+            <div class="attributeLabel">STRENGTH</div>
+          </div>
+          <div class="heroes" ref="heroes" :style="{width: numberOfColumns * 54 + 'px'}">
+            <Hero 
+              v-for="hero of heroesByAttr.str" 
+              :key="hero.name"
+              :hero="hero"
+              :class="getHeroClass(hero)"
+              :onMousedown="handleHeroMousedown"
+            />
+          </div>
+        </div>
+        <div class="heroesByAttribute">
+          <div class="attributeLabelContainer">
+            <div class="attributeLabel">AGILITY</div>
+          </div>
+          <div class="heroes" :style="{width: numberOfColumns * 54 + 'px'}">
+            <Hero 
+              v-for="hero of heroesByAttr.agi" 
+              :key="hero.name"
+              :hero="hero"
+              :class="getHeroClass(hero)"
+              :onMousedown = "handleHeroMousedown"
+            />
+          </div>
+        </div>
+        <div class="heroesByAttribute last">
+          <div class="attributeLabelContainer">
+            <div class="attributeLabel">INTELLIGENCE</div>
+          </div>
+          <div class="heroes" :style="{width: numberOfColumns * 54 + 'px'}">
+            <Hero 
+              v-for="hero of heroesByAttr.int" 
+              :key="hero.name"
+              :hero="hero"
+              :class="getHeroClass(hero)"
+              :onMousedown = "handleHeroMousedown"
+            />
+          </div>
+        </div>
+      </div>
+      <div class="overlay"></div>
+      <div class="filterText">{{overlayText}}</div>
+      <Fab class="fab"
+        :text="isFighting ? 'CANCEL' : 'MAN FIGHT'"
+        :click="handleFabClick"   
+      />
 
+      <Fight v-if="isFighting" :isFighting="isFighting" :heroes="activatedHeroes" />
+      
   </div>
 </template>
 
@@ -321,17 +321,4 @@ import Fight from './Fight'
     left: 5%;
   }
 }
-
-
-/* #heroAreas {
-  height: 100%;
-  display: flex;
-}
-#FightResults {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background-color: #f4f4f4
-} */
 </style>
