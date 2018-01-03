@@ -12,7 +12,7 @@
             :key="hero.name"
             :hero="hero"
             :class="getHeroClass(hero)"
-            :onMousedown = "handleHeroMousedown"
+            :onMousedown="handleHeroMousedown"
           />
         </div>
       </div>
@@ -54,13 +54,6 @@
 
     <Fight v-if="isFighting" :isFighting="isFighting" :heroes="activatedHeroes" />
 
-    <!-- <div v-if="false">
-      <div id="heroAreas">
-        <Hero id="heroLeft" class="Hero" :updateHero="updateHeroLeft" :heroStatsObj="heroStatsObj" />
-        <Hero id="heroRight" class="Hero" :updateHero="updateHeroRight" :heroStatsObj="heroStatsObj" />
-      </div>
-      <FightResults id="FightResults" :heroesRef="[heroLeft, heroRight]" />
-    </div> -->
   </div>
 </template>
 
@@ -143,6 +136,7 @@ import Fight from './Fight'
       handleFabClick() {
         if(this.activatedHeroes.length === 2) {
           this.overlayText = ''
+          if(this.isFighting) this.activatedHeroes = []
           this.isFighting = !this.isFighting
         }
       }
@@ -168,6 +162,7 @@ import Fight from './Fight'
   align-items: center;
   justify-content: center;
   overflow: hidden;
+  padding-bottom: 60px;
 }
 .Game .heroesContainer {
   margin: 45px 30px;

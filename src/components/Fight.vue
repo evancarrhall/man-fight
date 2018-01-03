@@ -22,11 +22,10 @@
 
 <script>
   import Vue from 'vue'
-  import Simulation from './Simulation'
   import FightHero from './FightHero'
   export default {
     name: 'Fight',
-    components: {FightHero, Simulation},
+    components: {FightHero},
     props: ['heroes', 'isFighting'],
     data() {
       return {

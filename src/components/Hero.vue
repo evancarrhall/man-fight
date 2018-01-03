@@ -2,13 +2,14 @@
   <div class="Hero" :class="{hover: isHover}">
     <div 
       class="hoverContainer"
+      :style="hoverContainerStyle"
       @mouseover="handleMouseover"
       @mouseout="handleMouseout"
       @mousedown="handleMousedown"
     >
     </div>
     <div class="newHeroLabel" v-if="hero.isNew">NEW</div>
-    <div class="imgContainer">
+    <div class="imgContainer" ref="imgContainer" :style="hoverStyle">
       <img :src="'/static/portraits/npc_dota_hero_' + hero.img">
       <div class="hoverLabel" v-if="isHover">{{hero.name}}</div>
     </div>
@@ -24,7 +25,37 @@
         isHover: false,
       }
     },
-    computed: {},
+    computed: {
+      hoverStyle() {
+        if(this.isHover) {
+            let parent = this.$refs.imgContainer.parentElement.parentElement.getBoundingClientRect()
+            let el = this.$refs.imgContainer.getBoundingClientRect()
+            let x = 0
+            let y = 0
+
+            if(el.x - 48 < parent.x) {
+              x = parent.x - el.x + 48 - 5
+            }
+            else if(el.right + 48 > parent.right) {
+              x = parent.right - el.right - 48 + 5
+            }
+
+            if(el.y - 46 < parent.y) {
+              y = parent.y - el.y + 46 - 5
+            }
+            else if(el.bottom + 46 > parent.bottom) {
+              y = parent.bottom - el.bottom - 46 + 5
+            }
+
+            return `transform: translate(${x}px, ${y}px)`
+        }
+      },
+      hoverContainerStyle() {
+        if(this.isHover) {
+          return 'transform: translate(0, 0)'
+        }
+      }
+    },
     mounted() {},
     methods: {
       handleMouseover() {
@@ -33,14 +64,12 @@
       },
       handleMousedown() { 
         if(this.onMousedown) this.onMousedown(this.hero)
-        else {
-
-        }
+        this.isHover = false
       },
       handleMouseout() {
         this.isHover = false
         if(this.onMouseout) this.onMouseout(this.hero)
-      },
+      }
     }
   }
 </script>
@@ -103,7 +132,7 @@
   width: 140px;
   top: -46px;
   left: -48px;
-  z-index: 3;
+  z-index: 99;
   border: 3px solid rgba(0,0,0,1);
   background-color: rgba(0,0,0,1);
   filter: brightness(140%);
